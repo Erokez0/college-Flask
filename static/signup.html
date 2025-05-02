@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="/signup" method="post" class="form">
+    <h1 class="form__header">Регистрация</h1>
+    <label for="username" class="form__label">Username</label>
+    <input type="text" name="username" placeholder="not john103294723" class="form__input" required>
+    <label for="password" class="form__label">Password</label>
+    <input type="password" name="password" placeholder="not 123456" class="form__input" required>
+    <button type="submit" class="form__input" >Готово</button>
+    <a href="{{url_for('get_login')}}" class="form__bottom">Есть аккаунт? Войти</a>
+    <a href="{{url_for('post_logout')}}" class="form__bottom">Выйти</a>
+</form>
+{% endblock %}

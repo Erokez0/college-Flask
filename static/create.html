@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="/create" method="post" class="form">
+      <h1 class="form__header">Создание поста</h1>
+      <label for="title" class="form__label">Title</label>
+      <input type="text" name="title" placeholder="О чём хотите рассказать?" class="form__input" required>
+      <label for="content" class="form__label">Content</label>
+      <textarea name="content" class="form__input" required placeholder='(с английского "содержание")'></textarea>
+      <button type="submit" class="form__input">Опубликовать</button>
+</form>
+{% endblock %}
